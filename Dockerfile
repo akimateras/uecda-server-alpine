@@ -54,5 +54,6 @@ RUN set -xeuo pipefail \
 WORKDIR /uecda
 EXPOSE 42485
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["./tndhms"]
