@@ -32,10 +32,10 @@ RUN set -xeuo pipefail \
     && mv src/*.xpm /uecda/ \
 
 # disable outputting debug files
-	&& touch /uecda/debug.dat  \
-	&& touch /uecda/debug2.dat \
-	&& chmod 000 /uecda/debug.dat  \
-	&& chmod 000 /uecda/debug2.dat \
+    && touch /uecda/debug.dat  \
+    && touch /uecda/debug2.dat \
+    && chmod 000 /uecda/debug.dat  \
+    && chmod 000 /uecda/debug2.dat \
 
 # remove uecda source code
     && cd /uecda \
@@ -47,8 +47,8 @@ RUN set -xeuo pipefail \
         wget g++ make \
         libxpm-dev libxt-dev libxaw-dev \
     && mv /usr/lib/libXpm.so.4.bak  /usr/lib/libXpm.so.4 \
-	&& rm -r /usr/include \
-	&& rm /usr/lib/*.a
+    && rm -r /usr/include \
+    && rm /usr/lib/*.a
 
 # boot
 WORKDIR /uecda
